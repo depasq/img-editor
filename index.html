@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Testing Pixlr Integration with OpenFITS</title>    
+</head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: steelblue;
+        }   
+        a {
+            color: lightsteelblue;
+        }
+    </style>
+
+    <script type="text/javascript" src="./pixlr.js"></script>
+    <script type="text/javascript">
+		pixlr.settings.target = 'http://localhost:8080/Desktop/dgmds/img-editor/';
+		pixlr.settings.exit = 'http://chandra.si.edu';
+		pixlr.settings.credentials = true;
+		pixlr.settings.method = 'post';
+	</script>
+    
+    <body>
+        <h4>Click the image to edit</h4>
+        <br />
+        
+        <b>Open image editor overlay</b><br />
+        <a href="javascript:pixlr.overlay.show({image:'./casa_0.5-1.5keV.png', title:'Cas A', service:'editor'});"><img src="./casa_0.5-1.5keV.png" width="512" height="512" title="Edit in pixlr" /></a><br /><br />
+        
+    </body>
+</html>
